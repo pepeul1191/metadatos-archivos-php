@@ -14,6 +14,8 @@ Flight::route('GET /', array('Controller_Index','index'));
 Flight::route('GET /error/404', array('Controller_Error','error_404'));
 
 Flight::route('POST /archivo/guardar', array('Controller_Archivo','guardar'));
+Flight::route('GET /archivo/obtener_ruta/@id', array('Controller_Archivo','obtener_ruta'));
+
 Flight::route('GET /extension/obtener_id', array('Controller_Extension','obtener_id'));
 
 /*

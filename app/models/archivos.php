@@ -19,6 +19,11 @@ class Archivos extends Database
 
 		return $archivos->id();
 	}
+
+  public function obtener_ruta($id)
+  {
+    return ORM::for_table('vw_carpeta_nombre_generado')->select('id')->select('ruta_documento')->where('id', $id)->find_array();
+  }
 }
 
 ?>

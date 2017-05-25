@@ -17,6 +17,17 @@ class Controller_Archivo extends Controller
 
       echo $rpta;
     }
+
+  public static function obtener_ruta($id)
+  {
+    $archivos = Controller::load_model('archivos');
+    $rs = $archivos->obtener_ruta($id);
+    if (empty($rs)) {
+      echo '';
+    }else{
+      echo json_encode($rs[0]);
+    }
+  }
 }
 
 ?>
